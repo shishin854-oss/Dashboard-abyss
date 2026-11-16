@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090a0c">
+  <title>ABYSS | Instagram</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <h1 class="logo">ABYSS<span>.</span></h1>
+
+    <nav>
+      <a href="#inicio">⌂ Início</a>
+      <a href="#publicacoes">▧ Publicações</a>
+      <a href="#configuracoes">⚙ Configurações</a>
+    </nav>
+
+    <div class="sidebar-footer">
+      ABYSS SOCIAL SYSTEM
+      <small>Discord integration</small>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header>
+      <div>
+        <span class="subtitle">CONTROL CENTER</span>
+        <h2>Dashboard</h2>
+      </div>
+      <div class="profile">A</div>
+    </header>
+
+    <section class="welcome" id="inicio">
+      <span class="subtitle">ABYSS SOCIAL NETWORK</span>
+      <h2>Seu espaço.<br>Suas publicações.</h2>
+      <p>Gerencie o Instagram interno do seu servidor Discord.</p>
+    </section>
+
+    <section class="stats">
+      <article>
+        <span>PUBLICAÇÕES</span>
+        <h2 id="totalPosts">0</h2>
+      </article>
+      <article>
+        <span>CURTIDAS</span>
+        <h2 id="totalLikes">0</h2>
+      </article>
+      <article>
+        <span>COMENTÁRIOS</span>
+        <h2 id="totalComments">0</h2>
+      </article>
+    </section>
+
+    <section id="publicacoes">
+      <div class="section-header">
+        <div>
+          <span class="subtitle">CONTENT SYSTEM</span>
+          <h2>Publicações recentes</h2>
+        </div>
+        <button onclick="loadDashboard()">Atualizar</button>
+      </div>
+
+      <div id="posts" class="posts">
+        <p class="empty">Conecte o bot para visualizar publicações.</p>
+      </div>
+    </section>
+
+    <section id="configuracoes" class="settings">
+      <span class="subtitle">BOT CONFIGURATION</span>
+      <h2>Configurações</h2>
+
+      <label>Nome do perfil</label>
+      <input id="profileName" placeholder="ABYSS">
+
+      <label>Instagram @</label>
+      <input id="profileHandle" placeholder="@seuusuario">
+
+      <label>Canal de publicações</label>
+      <select id="channelId">
+        <option value="">Selecione um canal</option>
+      </select>
+
+      <label class="check">
+        <input type="checkbox" id="allowLikes" checked>
+        Permitir curtidas
+      </label>
+
+      <label class="check">
+        <input type="checkbox" id="allowComments" checked>
+        Permitir comentários
+      </label>
+
+      <label class="check">
+        <input type="checkbox" id="allowSharing" checked>
+        Permitir compartilhamentos
+      </label>
+
+      <button class="save" onclick="saveSettings()">
+        Salvar configurações
+      </button>
+    </section>
+
+    <footer>
+      ABYSS © 2026 — ALL RIGHTS RESERVED
+    </footer>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
